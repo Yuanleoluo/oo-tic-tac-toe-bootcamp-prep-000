@@ -95,8 +95,12 @@ end
     full? && !won?
   end
 
-  def draw?
-    full? && !won?
+  def over?
+    if full? || draw? || won?
+      return true
+    end
   end
+
+  
 
 end
