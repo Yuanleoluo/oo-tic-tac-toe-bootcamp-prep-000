@@ -95,4 +95,8 @@ end
     full? && !won?
   end
 
+  def draw?
+    full? && !won?
+  end
+
 end
