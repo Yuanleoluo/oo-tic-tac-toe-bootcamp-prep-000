@@ -101,6 +101,24 @@ end
     end
   end
 
-  
+  def winner
+  count_x = 0
+  count_o = 0
+  @board.each do |x|
+    if x == "X"
+      count_x +=1
+    elsif x == "O"
+      count_o +=1
+    end
+  end
+
+  if won? && count_x > count_o
+    "X"
+  elsif won? && count_x < count_o
+    "O"
+  else
+    nil
+  end
+end
 
 end
